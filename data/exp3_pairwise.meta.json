@@ -1,0 +1,2252 @@
+{
+  "experiment": "exp3_pairwise_balanced_external_forces",
+  "version": "final_v1",
+  "N": 200,
+  "input_dim": 32,
+  "hidden": 256,
+  "batch_size": 12,
+  "epochs": 6000,
+  "repeats": 5,
+  "eta": 0.025,
+  "q_epoch": 0.054472361809045224,
+  "eta_naive_q": 0.45894833948339486,
+  "beta": 1.0,
+  "lambda": 1.0,
+  "A": 0.03,
+  "T0": 1.0,
+  "pair_count": 19900,
+  "linear_coefficient": 0.00030259296482412063,
+  "F_star": 0.0009061507537688442,
+  "kl_exponent": 0.75,
+  "expected_deterministic_reference_rate": "k^-2",
+  "analytic_check": {
+    "max_autograd_error": 1.5178830414797062e-18,
+    "status": "passed"
+  },
+  "frozen_diagnostic": [
+    {
+      "seed": 7919,
+      "q_epoch": 0.054472361809045224,
+      "full_gradient_norm": 4.084618389841389,
+      "full_output_gradient_norm": 0.07071067811865488,
+      "external_parameter_gradient_norm": 0.05831072496628585,
+      "expected_naive_q_bias_norm": 1.0121536909277071,
+      "epoch_gradient_diagnostics": {
+        "G": {
+          "absolute_error": 1.607368974565416e-15,
+          "relative_error": 3.935175385203689e-16,
+          "cosine_with_full": 1.0000000000000002,
+          "gradient_norm": 4.08461838984139
+        },
+        "H": {
+          "absolute_error": 1.607368974565416e-15,
+          "relative_error": 3.935175385203689e-16,
+          "cosine_with_full": 1.0000000000000002,
+          "gradient_norm": 4.08461838984139
+        },
+        "naive_raw": {
+          "absolute_error": 3.8659989641946364,
+          "relative_error": 0.9464773927986839,
+          "cosine_with_full": 0.9702810815519947,
+          "gradient_norm": 0.22571321641787667
+        },
+        "naive_q": {
+          "absolute_error": 1.0047267677783456,
+          "relative_error": 0.2459781237525497,
+          "cosine_with_full": 0.9702810815519947,
+          "gradient_norm": 4.1436282349776254
+        }
+      },
+      "batch_diagnostics": [
+        {
+          "batch_size": 12,
+          "G_norm": 0.25180209642531576,
+          "G_cosine": 0.9360558029240875,
+          "G_inner_product": 0.9627478775161535,
+          "H_norm": 0.25180209642531576,
+          "H_cosine": 0.9360558029240875,
+          "H_inner_product": 0.9627478775161535,
+          "naive_raw_norm": 0.01426924045948276,
+          "naive_raw_cosine": 0.8301351275104979,
+          "naive_raw_inner_product": 0.04838392947773557,
+          "naive_q_norm": 0.26195376858275543,
+          "naive_q_cosine": 0.8301351275104979,
+          "naive_q_inner_product": 0.8882289636595366
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2638265151029538,
+          "G_cosine": 0.922222480704988,
+          "G_inner_product": 0.9938151977860055,
+          "H_norm": 0.2638265151029538,
+          "H_cosine": 0.922222480704988,
+          "H_inner_product": 0.9938151977860055,
+          "naive_raw_norm": 0.016720269364777055,
+          "naive_raw_cosine": 0.8262024220283336,
+          "naive_raw_inner_product": 0.05642625429596694,
+          "naive_q_norm": 0.3069495944271803,
+          "naive_q_cosine": 0.8262024220283334,
+          "naive_q_inner_product": 1.0358694284960719
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24761326688470275,
+          "G_cosine": 0.9519337582187685,
+          "G_inner_product": 0.9627912324032879,
+          "H_norm": 0.24761326688470275,
+          "H_cosine": 0.9519337582187685,
+          "H_inner_product": 0.9627912324032879,
+          "naive_raw_norm": 0.017992013478058712,
+          "naive_raw_cosine": 0.8996684995708689,
+          "naive_raw_inner_product": 0.06611709607516622,
+          "naive_q_norm": 0.3302961883887162,
+          "naive_q_cosine": 0.8996684995708688,
+          "naive_q_inner_product": 1.2137732582064646
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2568332353681351,
+          "G_cosine": 0.9304046854396072,
+          "G_inner_product": 0.9760556950024144,
+          "H_norm": 0.2568332353681351,
+          "H_cosine": 0.9304046854396072,
+          "H_inner_product": 0.9760556950024144,
+          "naive_raw_norm": 0.005701583350661477,
+          "naive_raw_cosine": 0.5686878177288618,
+          "naive_raw_inner_product": 0.013244052416787402,
+          "naive_q_norm": 0.1046692884484902,
+          "naive_q_cosine": 0.5686878177288618,
+          "naive_q_inner_product": 0.2431334345886248
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2506994465516777,
+          "G_cosine": 0.9337995966526302,
+          "G_inner_product": 0.9562215907609957,
+          "H_norm": 0.2506994465516777,
+          "H_cosine": 0.9337995966526302,
+          "H_inner_product": 0.9562215907609957,
+          "naive_raw_norm": 0.01215190271653297,
+          "naive_raw_cosine": 0.844015619362994,
+          "naive_raw_inner_product": 0.041893462480452046,
+          "naive_q_norm": 0.2230838229326625,
+          "naive_q_cosine": 0.844015619362994,
+          "naive_q_inner_product": 0.7690774016245349
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.27014822322384563,
+          "G_cosine": 0.9385335996950356,
+          "G_inner_product": 1.0356271535926114,
+          "H_norm": 0.27014822322384563,
+          "H_cosine": 0.9385335996950356,
+          "H_inner_product": 1.0356271535926114,
+          "naive_raw_norm": 0.021442086740007707,
+          "naive_raw_cosine": 0.8747259743028994,
+          "naive_raw_inner_product": 0.07661089916607869,
+          "naive_q_norm": 0.3936324041754182,
+          "naive_q_cosine": 0.8747259743028993,
+          "naive_q_inner_product": 1.4064177983440644
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2698113244002639,
+          "G_cosine": 0.9157936265272968,
+          "G_inner_product": 1.0092744491357402,
+          "H_norm": 0.2698113244002639,
+          "H_cosine": 0.9157936265272968,
+          "H_inner_product": 1.0092744491357402,
+          "naive_raw_norm": 0.015300762267433508,
+          "naive_raw_cosine": 0.8479759819502509,
+          "naive_raw_inner_product": 0.0529966120711877,
+          "naive_q_norm": 0.28089037741875167,
+          "naive_q_cosine": 0.8479759819502509,
+          "naive_q_inner_product": 0.9729082843326893
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2607119463209641,
+          "G_cosine": 0.9488334582132332,
+          "G_inner_product": 1.010421109247833,
+          "H_norm": 0.2607119463209641,
+          "H_cosine": 0.9488334582132332,
+          "H_inner_product": 1.010421109247833,
+          "naive_raw_norm": 0.01274145962200766,
+          "naive_raw_cosine": 0.8455430517154843,
+          "naive_raw_inner_product": 0.04400544282486123,
+          "naive_q_norm": 0.23390686944460556,
+          "naive_q_cosine": 0.8455430517154842,
+          "naive_q_inner_product": 0.8078489965080612
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.27534598072391697,
+          "G_cosine": 0.9290394158852856,
+          "G_inner_product": 1.0448750756132408,
+          "H_norm": 0.27534598072391697,
+          "H_cosine": 0.9290394158852856,
+          "H_inner_product": 1.0448750756132408,
+          "naive_raw_norm": 0.013964941515736323,
+          "naive_raw_cosine": 0.8245179133402919,
+          "naive_raw_inner_product": 0.04703170304035934,
+          "naive_q_norm": 0.25636746878519634,
+          "naive_q_cosine": 0.824517913340292,
+          "naive_q_inner_product": 0.8634048805379623
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26251542082137574,
+          "G_cosine": 0.9509310270048357,
+          "G_inner_product": 1.0196598670040982,
+          "H_norm": 0.26251542082137574,
+          "H_cosine": 0.9509310270048357,
+          "H_inner_product": 1.0196598670040982,
+          "naive_raw_norm": 0.01584756865869118,
+          "naive_raw_cosine": 0.8553985458724714,
+          "naive_raw_inner_product": 0.05537103455344605,
+          "naive_q_norm": 0.2909286128302163,
+          "naive_q_cosine": 0.8553985458724711,
+          "naive_q_inner_product": 1.0164977745512696
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.27284907695097216,
+          "G_cosine": 0.9249064669245082,
+          "G_inner_product": 1.0307937894132682,
+          "H_norm": 0.27284907695097216,
+          "H_cosine": 0.9249064669245082,
+          "H_inner_product": 1.0307937894132682,
+          "naive_raw_norm": 0.01561527774109396,
+          "naive_raw_cosine": 0.8601007975571124,
+          "naive_raw_inner_product": 0.05485933665163736,
+          "naive_q_norm": 0.28666423159388355,
+          "naive_q_cosine": 0.8601007975571126,
+          "naive_q_inner_product": 1.0071040584571802
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25289514056387136,
+          "G_cosine": 0.9510097459203254,
+          "G_inner_product": 0.9823741822402854,
+          "H_norm": 0.25289514056387136,
+          "H_cosine": 0.9510097459203254,
+          "H_inner_product": 0.9823741822402854,
+          "naive_raw_norm": 0.014930735047066402,
+          "naive_raw_cosine": 0.882423148745231,
+          "naive_raw_inner_product": 0.05381577136291142,
+          "naive_q_norm": 0.2740974422847061,
+          "naive_q_cosine": 0.8824231487452309,
+          "naive_q_inner_product": 0.9879463562010492
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2564166580175436,
+          "G_cosine": 0.9314091721843065,
+          "G_inner_product": 0.9755246195170892,
+          "H_norm": 0.2564166580175436,
+          "H_cosine": 0.9314091721843065,
+          "H_inner_product": 0.9755246195170892,
+          "naive_raw_norm": 0.015957469226428354,
+          "naive_raw_cosine": 0.8474031568092774,
+          "naive_raw_inner_product": 0.05523388373246044,
+          "naive_q_norm": 0.2929461601530666,
+          "naive_q_cosine": 0.8474031568092775,
+          "naive_q_inner_product": 1.0139799688892646
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26346081348008976,
+          "G_cosine": 0.9448973420781863,
+          "G_inner_product": 1.0168388811613907,
+          "H_norm": 0.26346081348008976,
+          "H_cosine": 0.9448973420781863,
+          "H_inner_product": 1.0168388811613907,
+          "naive_raw_norm": 0.015191853603661615,
+          "naive_raw_cosine": 0.8733606854057057,
+          "naive_raw_inner_product": 0.05419458476470851,
+          "naive_q_norm": 0.2788910394030131,
+          "naive_q_cosine": 0.8733606854057057,
+          "naive_q_inner_product": 0.9949005874702024
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26810946560764876,
+          "G_cosine": 0.9405142591277281,
+          "G_inner_product": 1.0299805404408797,
+          "H_norm": 0.26810946560764876,
+          "H_cosine": 0.9405142591277281,
+          "H_inner_product": 1.0299805404408797,
+          "naive_raw_norm": 0.010862936171320036,
+          "naive_raw_cosine": 0.8123338397922631,
+          "naive_raw_inner_product": 0.036044023257021815,
+          "naive_q_norm": 0.1994210607096575,
+          "naive_q_cosine": 0.8123338397922634,
+          "naive_q_inner_product": 0.6616937848844412
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2615855092911685,
+          "G_cosine": 0.9375248964486007,
+          "G_inner_product": 1.0017237716885694,
+          "H_norm": 0.2615855092911685,
+          "H_cosine": 0.9375248964486007,
+          "H_inner_product": 1.0017237716885694,
+          "naive_raw_norm": 0.02517780612971851,
+          "naive_raw_cosine": 0.9130071342973628,
+          "naive_raw_inner_product": 0.09389523313259421,
+          "naive_q_norm": 0.46221249260276603,
+          "naive_q_cosine": 0.9130071342973628,
+          "naive_q_inner_product": 1.723722453264414
+        },
+        {
+          "batch_size": 8,
+          "G_norm": 0.1804419220015268,
+          "G_cosine": 0.9163487238993914,
+          "G_inner_product": 0.6753823581066054,
+          "H_norm": 0.1804419220015268,
+          "H_cosine": 0.9163487238993914,
+          "H_inner_product": 0.6753823581066054,
+          "naive_raw_norm": 0.013004731349616121,
+          "naive_raw_cosine": 0.8364107630727639,
+          "naive_raw_inner_product": 0.04442960846771129,
+          "naive_q_norm": 0.23873999433335874,
+          "naive_q_cosine": 0.8364107630727636,
+          "naive_q_inner_product": 0.815635801206139
+        }
+      ]
+    },
+    {
+      "seed": 7920,
+      "q_epoch": 0.054472361809045224,
+      "full_gradient_norm": 4.039323654106786,
+      "full_output_gradient_norm": 0.07071067811865488,
+      "external_parameter_gradient_norm": 0.05783823401083461,
+      "expected_naive_q_bias_norm": 1.0039522243061476,
+      "epoch_gradient_diagnostics": {
+        "G": {
+          "absolute_error": 1.5740739733107142e-15,
+          "relative_error": 3.89687509123056e-16,
+          "cosine_with_full": 1.0,
+          "gradient_norm": 4.039323654106786
+        },
+        "H": {
+          "absolute_error": 1.5740739733107142e-15,
+          "relative_error": 3.89687509123056e-16,
+          "cosine_with_full": 1.0,
+          "gradient_norm": 4.039323654106786
+        },
+        "naive_raw": {
+          "absolute_error": 3.825208260043743,
+          "relative_error": 0.9469922659340874,
+          "cosine_with_full": 0.969166223114075,
+          "gradient_norm": 0.22132858568713148
+        },
+        "naive_q": {
+          "absolute_error": 1.0063173365162585,
+          "relative_error": 0.2491301570977444,
+          "cosine_with_full": 0.9691662231140752,
+          "gradient_norm": 4.06313547525269
+        }
+      },
+      "batch_diagnostics": [
+        {
+          "batch_size": 12,
+          "G_norm": 0.24571493474430603,
+          "G_cosine": 0.9386061341147348,
+          "G_inner_product": 0.931587376432603,
+          "H_norm": 0.24571493474430603,
+          "H_cosine": 0.9386061341147348,
+          "H_inner_product": 0.931587376432603,
+          "naive_raw_norm": 0.01058232168910615,
+          "naive_raw_cosine": 0.8358516940822874,
+          "naive_raw_inner_product": 0.03572883365556494,
+          "naive_q_norm": 0.19426955868377527,
+          "naive_q_cosine": 0.8358516940822875,
+          "naive_q_inner_product": 0.6559075551159985
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2508771296824334,
+          "G_cosine": 0.9639765077886888,
+          "G_inner_product": 0.9768686565350804,
+          "H_norm": 0.2508771296824334,
+          "H_cosine": 0.9639765077886888,
+          "H_inner_product": 0.9768686565350804,
+          "naive_raw_norm": 0.013938265441837272,
+          "naive_raw_cosine": 0.8147695118385689,
+          "naive_raw_inner_product": 0.04587247296451685,
+          "naive_q_norm": 0.2558777511924001,
+          "naive_q_cosine": 0.8147695118385689,
+          "naive_q_inner_product": 0.8421238118024773
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23636786342172153,
+          "G_cosine": 0.9422300111824459,
+          "G_inner_product": 0.8996094632122538,
+          "H_norm": 0.23636786342172153,
+          "H_cosine": 0.9422300111824459,
+          "H_inner_product": 0.8996094632122538,
+          "naive_raw_norm": 0.02065617623763575,
+          "naive_raw_cosine": 0.8906932676869119,
+          "naive_raw_inner_product": 0.0743167575022867,
+          "naive_q_norm": 0.3792047113735715,
+          "naive_q_cosine": 0.8906932676869118,
+          "naive_q_inner_product": 1.3643020980585843
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26094582771139674,
+          "G_cosine": 0.9314696776843668,
+          "G_inner_product": 0.9818106344198337,
+          "H_norm": 0.26094582771139674,
+          "H_cosine": 0.9314696776843668,
+          "H_inner_product": 0.9818106344198337,
+          "naive_raw_norm": 0.012007419762350905,
+          "naive_raw_cosine": 0.8315826392207735,
+          "naive_raw_inner_product": 0.04033330031429058,
+          "naive_q_norm": 0.2204314144564419,
+          "naive_q_cosine": 0.8315826392207736,
+          "naive_q_inner_product": 0.7404360482051501
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26806432163265914,
+          "G_cosine": 0.9250758873973406,
+          "G_inner_product": 1.0016708343176206,
+          "H_norm": 0.26806432163265914,
+          "H_cosine": 0.9250758873973406,
+          "H_inner_product": 1.0016708343176206,
+          "naive_raw_norm": 0.012642811272014241,
+          "naive_raw_cosine": 0.8091301461657286,
+          "naive_raw_inner_product": 0.0413209873173053,
+          "naive_q_norm": 0.23209588958771532,
+          "naive_q_cosine": 0.8091301461657288,
+          "naive_q_inner_product": 0.7585679406036674
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24292773224188519,
+          "G_cosine": 0.9370620323751921,
+          "G_inner_product": 0.9195049898931041,
+          "H_norm": 0.24292773224188519,
+          "H_cosine": 0.9370620323751921,
+          "H_inner_product": 0.9195049898931041,
+          "naive_raw_norm": 0.01704556305628795,
+          "naive_raw_cosine": 0.8603704598433284,
+          "naive_raw_inner_product": 0.05923869670713885,
+          "naive_q_norm": 0.3129213144097142,
+          "naive_q_cosine": 0.8603704598433284,
+          "naive_q_inner_product": 1.087500059476073
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2574180478053272,
+          "G_cosine": 0.9343663421854992,
+          "G_inner_product": 0.9715492727704229,
+          "H_norm": 0.2574180478053272,
+          "H_cosine": 0.9343663421854992,
+          "H_inner_product": 0.9715492727704229,
+          "naive_raw_norm": 0.02297602057133668,
+          "naive_raw_cosine": 0.9030997848871108,
+          "naive_raw_inner_product": 0.08381450857828276,
+          "naive_q_norm": 0.4217922595660517,
+          "naive_q_cosine": 0.9030997848871105,
+          "naive_q_inner_product": 1.538661181464785
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.27542348744227013,
+          "G_cosine": 0.943792384377466,
+          "G_inner_product": 1.0499922522006884,
+          "H_norm": 0.27542348744227013,
+          "H_cosine": 0.943792384377466,
+          "H_inner_product": 1.0499922522006884,
+          "naive_raw_norm": 0.015394985975012753,
+          "naive_raw_cosine": 0.8652347606129711,
+          "naive_raw_inner_product": 0.05380490998446141,
+          "naive_q_norm": 0.2826201299840902,
+          "naive_q_cosine": 0.8652347606129711,
+          "naive_q_inner_product": 0.9877469637368839
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25932298432450374,
+          "G_cosine": 0.9379676238041382,
+          "G_inner_product": 0.9825112041040581,
+          "H_norm": 0.25932298432450374,
+          "H_cosine": 0.9379676238041382,
+          "H_inner_product": 0.9825112041040581,
+          "naive_raw_norm": 0.01579781683316552,
+          "naive_raw_cosine": 0.838448673197229,
+          "naive_raw_inner_product": 0.053503501948477014,
+          "naive_q_norm": 0.29001527212176553,
+          "naive_q_cosine": 0.8384486731972289,
+          "naive_q_inner_product": 0.9822137350320042
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.28032750867820844,
+          "G_cosine": 0.9335163544433617,
+          "G_inner_product": 1.057051875194808,
+          "H_norm": 0.28032750867820844,
+          "H_cosine": 0.9335163544433617,
+          "H_inner_product": 1.057051875194808,
+          "naive_raw_norm": 0.014230126674428386,
+          "naive_raw_cosine": 0.8577386619678715,
+          "naive_raw_inner_product": 0.04930289315073144,
+          "naive_q_norm": 0.26123572031469083,
+          "naive_q_cosine": 0.8577386619678715,
+          "naive_q_inner_product": 0.9050992377302173
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2524654251619209,
+          "G_cosine": 0.9380491807673531,
+          "G_inner_product": 0.9566127647845133,
+          "H_norm": 0.2524654251619209,
+          "H_cosine": 0.9380491807673531,
+          "H_inner_product": 0.9566127647845133,
+          "naive_raw_norm": 0.015537649309844144,
+          "naive_raw_cosine": 0.8535627126470441,
+          "naive_raw_inner_product": 0.05357095675456834,
+          "naive_q_norm": 0.2852391340091314,
+          "naive_q_cosine": 0.8535627126470441,
+          "naive_q_inner_product": 0.9834520658818358
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26252983526535695,
+          "G_cosine": 0.9401709234177394,
+          "G_inner_product": 0.9969976496236952,
+          "H_norm": 0.26252983526535695,
+          "H_cosine": 0.9401709234177394,
+          "H_inner_product": 0.9969976496236952,
+          "naive_raw_norm": 0.010879490644055677,
+          "naive_raw_cosine": 0.7878738941060194,
+          "naive_raw_inner_product": 0.03462373589333026,
+          "naive_q_norm": 0.19972496662057931,
+          "naive_q_cosine": 0.7878738941060196,
+          "naive_q_inner_product": 0.6356202437982217
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2564999326993559,
+          "G_cosine": 0.9347155545340853,
+          "G_inner_product": 0.968445929441593,
+          "H_norm": 0.2564999326993559,
+          "H_cosine": 0.9347155545340853,
+          "H_inner_product": 0.968445929441593,
+          "naive_raw_norm": 0.014016105834750945,
+          "naive_raw_cosine": 0.8503268616895134,
+          "naive_raw_inner_product": 0.048141755127950714,
+          "naive_q_norm": 0.2573067399552987,
+          "naive_q_cosine": 0.8503268616895134,
+          "naive_q_inner_product": 0.8837831430315675
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2660052414009861,
+          "G_cosine": 0.9392777536006911,
+          "G_inner_product": 1.009236347661108,
+          "H_norm": 0.2660052414009861,
+          "H_cosine": 0.9392777536006911,
+          "H_inner_product": 1.009236347661108,
+          "naive_raw_norm": 0.017605784128424312,
+          "naive_raw_cosine": 0.8882824404123646,
+          "naive_raw_inner_product": 0.06317061460771614,
+          "naive_q_norm": 0.3232058156417379,
+          "naive_q_cosine": 0.8882824404123645,
+          "naive_q_inner_product": 1.1596819471342723
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2602568732814636,
+          "G_cosine": 0.9244209270444932,
+          "G_inner_product": 0.9718083563151265,
+          "H_norm": 0.2602568732814636,
+          "H_cosine": 0.9244209270444932,
+          "H_inner_product": 0.9718083563151265,
+          "naive_raw_norm": 0.014249635243441597,
+          "naive_raw_cosine": 0.8620028769234898,
+          "naive_raw_inner_product": 0.04961592765297693,
+          "naive_q_norm": 0.26159385732886326,
+          "naive_q_cosine": 0.8620028769234898,
+          "naive_q_inner_product": 0.9108459043304804
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25306812725034333,
+          "G_cosine": 0.9341453493387076,
+          "G_inner_product": 0.9549058633105814,
+          "H_norm": 0.25306812725034333,
+          "H_cosine": 0.9341453493387076,
+          "H_inner_product": 0.9549058633105814,
+          "naive_raw_norm": 0.016625660937901722,
+          "naive_raw_cosine": 0.8395386655704331,
+          "naive_raw_inner_product": 0.0563804158417196,
+          "naive_q_norm": 0.30521277921055745,
+          "naive_q_cosine": 0.8395386655704329,
+          "naive_q_inner_product": 1.0350279291976199
+        },
+        {
+          "batch_size": 8,
+          "G_norm": 0.18688617286873346,
+          "G_cosine": 0.9087002279236299,
+          "G_inner_product": 0.6859721124095088,
+          "H_norm": 0.18688617286873346,
+          "H_cosine": 0.9087002279236299,
+          "H_inner_product": 0.6859721124095088,
+          "naive_raw_norm": 0.008284358897833329,
+          "naive_raw_cosine": 0.7085865524583813,
+          "naive_raw_inner_product": 0.023711578379676954,
+          "naive_q_norm": 0.15208371039380372,
+          "naive_q_cosine": 0.7085865524583813,
+          "naive_q_inner_product": 0.43529558095532417
+        }
+      ]
+    },
+    {
+      "seed": 7921,
+      "q_epoch": 0.054472361809045224,
+      "full_gradient_norm": 3.9106890823265736,
+      "full_output_gradient_norm": 0.07071067811865488,
+      "external_parameter_gradient_norm": 0.05536108994501357,
+      "expected_naive_q_bias_norm": 0.9609541221451803,
+      "epoch_gradient_diagnostics": {
+        "G": {
+          "absolute_error": 1.5419964686537e-15,
+          "relative_error": 3.9430300803568997e-16,
+          "cosine_with_full": 1.0000000000000002,
+          "gradient_norm": 3.9106890823265736
+        },
+        "H": {
+          "absolute_error": 1.5419964686537e-15,
+          "relative_error": 3.9430300803568997e-16,
+          "cosine_with_full": 1.0000000000000002,
+          "gradient_norm": 3.9106890823265736
+        },
+        "naive_raw": {
+          "absolute_error": 3.695316314875679,
+          "relative_error": 0.9449271565913484,
+          "cosine_with_full": 0.9719475911609399,
+          "gradient_norm": 0.22196831037705217
+        },
+        "naive_q": {
+          "absolute_error": 0.9596987459413595,
+          "relative_error": 0.24540400060912257,
+          "cosine_with_full": 0.97194759116094,
+          "gradient_norm": 4.074879498619315
+        }
+      },
+      "batch_diagnostics": [
+        {
+          "batch_size": 12,
+          "G_norm": 0.24917158383801563,
+          "G_cosine": 0.9225396259714376,
+          "G_inner_product": 0.8989526794574737,
+          "H_norm": 0.24917158383801563,
+          "H_cosine": 0.9225396259714376,
+          "H_inner_product": 0.8989526794574737,
+          "naive_raw_norm": 0.00821342684516064,
+          "naive_raw_cosine": 0.711459708782858,
+          "naive_raw_inner_product": 0.022852198748968273,
+          "naive_q_norm": 0.15078154448219258,
+          "naive_q_cosine": 0.711459708782858,
+          "naive_q_inner_product": 0.4195191467753401
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2599573382818315,
+          "G_cosine": 0.9279539252152116,
+          "G_inner_product": 0.9433693971177217,
+          "H_norm": 0.2599573382818315,
+          "H_cosine": 0.9279539252152116,
+          "H_inner_product": 0.9433693971177217,
+          "naive_raw_norm": 0.01415572466819485,
+          "naive_raw_cosine": 0.8184145426033204,
+          "naive_raw_inner_product": 0.04530631432616285,
+          "naive_q_norm": 0.2598698532260863,
+          "naive_q_cosine": 0.8184145426033204,
+          "naive_q_inner_product": 0.8317303091242072
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2400264485391662,
+          "G_cosine": 0.9398858316610363,
+          "G_inner_product": 0.8822415168063571,
+          "H_norm": 0.2400264485391662,
+          "H_cosine": 0.9398858316610363,
+          "H_inner_product": 0.8822415168063571,
+          "naive_raw_norm": 0.016875267524152516,
+          "naive_raw_cosine": 0.8908641668625364,
+          "naive_raw_inner_product": 0.05879162253921267,
+          "naive_q_norm": 0.30979504034191424,
+          "naive_q_cosine": 0.8908641668625367,
+          "naive_q_inner_product": 1.0792927015962475
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2530717077858196,
+          "G_cosine": 0.9221540349121713,
+          "G_inner_product": 0.9126417990442188,
+          "H_norm": 0.2530717077858196,
+          "H_cosine": 0.9221540349121713,
+          "H_inner_product": 0.9126417990442188,
+          "naive_raw_norm": 0.01706647496989775,
+          "naive_raw_cosine": 0.8458891976893645,
+          "naive_raw_inner_product": 0.05645606389637293,
+          "naive_q_norm": 0.31330521393077976,
+          "naive_q_cosine": 0.8458891976893643,
+          "naive_q_inner_product": 1.0364166711603515
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24923225151364528,
+          "G_cosine": 0.9316060968193457,
+          "G_inner_product": 0.9080083699489168,
+          "H_norm": 0.24923225151364528,
+          "H_cosine": 0.9316060968193457,
+          "H_inner_product": 0.9080083699489168,
+          "naive_raw_norm": 0.005736395877936157,
+          "naive_raw_cosine": 0.6583626911580782,
+          "naive_raw_inner_product": 0.01476922190680451,
+          "naive_q_norm": 0.10530837451192758,
+          "naive_q_cosine": 0.6583626911580786,
+          "naive_q_inner_product": 0.2711323947835884
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24451372769736293,
+          "G_cosine": 0.9243303112185851,
+          "G_inner_product": 0.8838605100729165,
+          "H_norm": 0.24451372769736293,
+          "H_cosine": 0.9243303112185851,
+          "H_inner_product": 0.8838605100729165,
+          "naive_raw_norm": 0.012645965051122749,
+          "naive_raw_cosine": 0.7997577750761856,
+          "naive_raw_inner_product": 0.03955157087138106,
+          "naive_q_norm": 0.23215378645511323,
+          "naive_q_cosine": 0.7997577750761855,
+          "naive_q_inner_product": 0.7260851110152059
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2551380465320653,
+          "G_cosine": 0.9199015507560603,
+          "G_inner_product": 0.9178460979480542,
+          "H_norm": 0.2551380465320653,
+          "H_cosine": 0.9199015507560603,
+          "H_inner_product": 0.9178460979480542,
+          "naive_raw_norm": 0.019211470385667437,
+          "naive_raw_cosine": 0.8862454995742001,
+          "naive_raw_inner_product": 0.06658370192299462,
+          "naive_q_norm": 0.3526828973014594,
+          "naive_q_cosine": 0.8862454995742,
+          "naive_q_inner_product": 1.222339177368628
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2641630637894101,
+          "G_cosine": 0.9163762581571384,
+          "G_inner_product": 0.9466712994207993,
+          "H_norm": 0.2641630637894101,
+          "H_cosine": 0.9163762581571384,
+          "H_inner_product": 0.9466712994207993,
+          "naive_raw_norm": 0.017138390467425903,
+          "naive_raw_cosine": 0.8709940274459763,
+          "naive_raw_inner_product": 0.058376559964462754,
+          "naive_q_norm": 0.3146254338577264,
+          "naive_q_cosine": 0.8709940274459764,
+          "naive_q_inner_product": 1.0716730104177203
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23792219523129227,
+          "G_cosine": 0.9357645563341912,
+          "G_inner_product": 0.8706725223876388,
+          "H_norm": 0.23792219523129227,
+          "H_cosine": 0.9357645563341912,
+          "H_inner_product": 0.8706725223876388,
+          "naive_raw_norm": 0.023372496187505584,
+          "naive_raw_cosine": 0.9166126842344231,
+          "naive_raw_inner_product": 0.08378075106212307,
+          "naive_q_norm": 0.42907073259350653,
+          "naive_q_cosine": 0.9166126842344233,
+          "naive_q_inner_product": 1.5380414632253223
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26690773474526386,
+          "G_cosine": 0.9231719656237399,
+          "G_inner_product": 0.9636005871515922,
+          "H_norm": 0.26690773474526386,
+          "H_cosine": 0.9231719656237399,
+          "H_inner_product": 0.9636005871515922,
+          "naive_raw_norm": 0.017032959053105652,
+          "naive_raw_cosine": 0.8418461770204186,
+          "naive_raw_inner_product": 0.056075884859280105,
+          "naive_q_norm": 0.31268993095645986,
+          "naive_q_cosine": 0.8418461770204185,
+          "naive_q_inner_product": 1.0294373696491457
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2644352922937739,
+          "G_cosine": 0.9449822671427017,
+          "G_inner_product": 0.977229040997513,
+          "H_norm": 0.2644352922937739,
+          "H_cosine": 0.9449822671427017,
+          "H_inner_product": 0.977229040997513,
+          "naive_raw_norm": 0.021039388569293205,
+          "naive_raw_cosine": 0.8913702960878506,
+          "naive_raw_inner_product": 0.07334061730381619,
+          "naive_q_norm": 0.38623969790492135,
+          "naive_q_cosine": 0.8913702960878506,
+          "naive_q_inner_product": 1.3463821811309429
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26029912374655245,
+          "G_cosine": 0.9073412660807572,
+          "G_inner_product": 0.9236270812725923,
+          "H_norm": 0.26029912374655245,
+          "H_cosine": 0.9073412660807572,
+          "H_inner_product": 0.9236270812725923,
+          "naive_raw_norm": 0.005447401839424603,
+          "naive_raw_cosine": 0.6411951047915329,
+          "naive_raw_inner_product": 0.013659440167099478,
+          "naive_q_norm": 0.10000304114810848,
+          "naive_q_cosine": 0.6411951047915329,
+          "naive_q_inner_product": 0.25075909531852364
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23994511267199087,
+          "G_cosine": 0.9638136975757844,
+          "G_inner_product": 0.9043952890983249,
+          "H_norm": 0.23994511267199087,
+          "H_cosine": 0.9638136975757844,
+          "H_inner_product": 0.9043952890983249,
+          "naive_raw_norm": 0.015193549550386537,
+          "naive_raw_cosine": 0.8856790406277758,
+          "naive_raw_inner_product": 0.05262461151402801,
+          "naive_q_norm": 0.27892217348034326,
+          "naive_q_cosine": 0.8856790406277758,
+          "naive_q_inner_product": 0.9660791228128758
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25386961557071613,
+          "G_cosine": 0.930098810577546,
+          "G_inner_product": 0.9234068742192407,
+          "H_norm": 0.25386961557071613,
+          "H_cosine": 0.930098810577546,
+          "H_inner_product": 0.9234068742192407,
+          "naive_raw_norm": 0.006997125475031843,
+          "naive_raw_cosine": 0.7977311821339482,
+          "naive_raw_inner_product": 0.021828782778119872,
+          "naive_q_norm": 0.12845276471691297,
+          "naive_q_cosine": 0.7977311821339483,
+          "naive_q_inner_product": 0.4007313443584737
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25538113476533125,
+          "G_cosine": 0.9296466003967112,
+          "G_inner_product": 0.928453134555449,
+          "H_norm": 0.25538113476533125,
+          "H_cosine": 0.9296466003967112,
+          "H_inner_product": 0.928453134555449,
+          "naive_raw_norm": 0.015204083439150784,
+          "naive_raw_cosine": 0.8708906980769935,
+          "naive_raw_inner_product": 0.05178180502861536,
+          "naive_q_norm": 0.2791155539106094,
+          "naive_q_cosine": 0.8708906980769937,
+          "naive_q_inner_product": 0.950606937333437
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24289733349339787,
+          "G_cosine": 0.9221662211061487,
+          "G_inner_product": 0.8759619588573677,
+          "H_norm": 0.24289733349339787,
+          "H_cosine": 0.9221662211061487,
+          "H_inner_product": 0.8759619588573677,
+          "naive_raw_norm": 0.02445117131330454,
+          "naive_raw_cosine": 0.8869061284570261,
+          "naive_raw_inner_product": 0.08480678767724947,
+          "naive_q_norm": 0.4488729789066055,
+          "naive_q_cosine": 0.8869061284570259,
+          "naive_q_inner_product": 1.556877375255779
+        },
+        {
+          "batch_size": 8,
+          "G_norm": 0.1755753979641552,
+          "G_cosine": 0.9212522365970996,
+          "G_inner_product": 0.6325509402720811,
+          "H_norm": 0.1755753979641552,
+          "H_cosine": 0.9212522365970996,
+          "H_inner_product": 0.6325509402720811,
+          "naive_raw_norm": 0.012767170433867861,
+          "naive_raw_cosine": 0.8634808501296095,
+          "naive_raw_inner_product": 0.04311224666007683,
+          "naive_q_norm": 0.234378866821006,
+          "naive_q_cosine": 0.8634808501296095,
+          "naive_q_inner_product": 0.7914517606416321
+        }
+      ]
+    },
+    {
+      "seed": 7922,
+      "q_epoch": 0.054472361809045224,
+      "full_gradient_norm": 3.947359408220236,
+      "full_output_gradient_norm": 0.07071067811865488,
+      "external_parameter_gradient_norm": 0.05472346688452693,
+      "expected_naive_q_bias_norm": 0.9498863034126003,
+      "epoch_gradient_diagnostics": {
+        "G": {
+          "absolute_error": 1.5637009488370961e-15,
+          "relative_error": 3.9613847818892405e-16,
+          "cosine_with_full": 1.0,
+          "gradient_norm": 3.9473594082202355
+        },
+        "H": {
+          "absolute_error": 1.5637009488370961e-15,
+          "relative_error": 3.9613847818892405e-16,
+          "cosine_with_full": 1.0,
+          "gradient_norm": 3.9473594082202355
+        },
+        "naive_raw": {
+          "absolute_error": 3.7330550469099726,
+          "relative_error": 0.9457094378424264,
+          "cosine_with_full": 0.9719093471388799,
+          "gradient_norm": 0.22087071655563534
+        },
+        "naive_q": {
+          "absolute_error": 0.9543254132847444,
+          "relative_error": 0.24176299003769344,
+          "cosine_with_full": 0.9719093471388799,
+          "gradient_norm": 4.054729944148656
+        }
+      },
+      "batch_diagnostics": [
+        {
+          "batch_size": 12,
+          "G_norm": 0.25174772057959977,
+          "G_cosine": 0.9284926050466628,
+          "G_inner_product": 0.9226790652433763,
+          "H_norm": 0.25174772057959977,
+          "H_cosine": 0.9284926050466628,
+          "H_inner_product": 0.9226790652433763,
+          "naive_raw_norm": 0.019722881270159875,
+          "naive_raw_cosine": 0.9085743939614865,
+          "naive_raw_inner_product": 0.07073551571853158,
+          "naive_q_norm": 0.3620713443507209,
+          "naive_q_cosine": 0.9085743939614866,
+          "naive_q_inner_product": 1.298557899260866
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25802320161980286,
+          "G_cosine": 0.9296278587952038,
+          "G_inner_product": 0.9468355609265496,
+          "H_norm": 0.25802320161980286,
+          "H_cosine": 0.9296278587952038,
+          "H_inner_product": 0.9468355609265496,
+          "naive_raw_norm": 0.010184088170195652,
+          "naive_raw_cosine": 0.8014243835696133,
+          "naive_raw_inner_product": 0.03221746558671366,
+          "naive_q_norm": 0.18695881419455115,
+          "naive_q_cosine": 0.8014243835696133,
+          "naive_q_inner_product": 0.591446093335426
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24054556732352253,
+          "G_cosine": 0.9290276702253423,
+          "G_inner_product": 0.88213017531935,
+          "H_norm": 0.24054556732352253,
+          "H_cosine": 0.9290276702253423,
+          "H_inner_product": 0.88213017531935,
+          "naive_raw_norm": 0.018438196105959627,
+          "naive_raw_cosine": 0.8905161699737898,
+          "naive_raw_inner_product": 0.06481371429331659,
+          "naive_q_norm": 0.33848717943597467,
+          "naive_q_cosine": 0.89051616997379,
+          "naive_q_inner_product": 1.1898458620267531
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24867206696333582,
+          "G_cosine": 0.9254711609570572,
+          "G_inner_product": 0.9084406620216032,
+          "H_norm": 0.24867206696333582,
+          "H_cosine": 0.9254711609570572,
+          "H_inner_product": 0.9084406620216032,
+          "naive_raw_norm": 0.014506667234070784,
+          "naive_raw_cosine": 0.8687400643843908,
+          "naive_raw_inner_product": 0.04974668783766266,
+          "naive_q_norm": 0.2663124335405984,
+          "naive_q_cosine": 0.8687400643843907,
+          "naive_q_inner_product": 0.913246391115763
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23638591061641223,
+          "G_cosine": 0.9388534390111583,
+          "G_inner_product": 0.8760442831192012,
+          "H_norm": 0.23638591061641223,
+          "H_cosine": 0.9388534390111583,
+          "H_inner_product": 0.8760442831192012,
+          "naive_raw_norm": 0.010791392144054175,
+          "naive_raw_cosine": 0.7753616777926859,
+          "naive_raw_inner_product": 0.03302847163438053,
+          "naive_q_norm": 0.19810766020911266,
+          "naive_q_cosine": 0.7753616777926859,
+          "naive_q_inner_product": 0.6063344884909342
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2625825664993544,
+          "G_cosine": 0.940351048819236,
+          "G_inner_product": 0.9746811632742804,
+          "H_norm": 0.2625825664993544,
+          "H_cosine": 0.940351048819236,
+          "H_inner_product": 0.9746811632742804,
+          "naive_raw_norm": 0.020748228683281838,
+          "naive_raw_cosine": 0.8996722544847708,
+          "naive_raw_inner_product": 0.07368380153490806,
+          "naive_q_norm": 0.3808946040565578,
+          "naive_q_cosine": 0.8996722544847707,
+          "naive_q_inner_product": 1.352682334450803
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26064764647611266,
+          "G_cosine": 0.934628091133204,
+          "G_inner_product": 0.9616107476240311,
+          "H_norm": 0.26064764647611266,
+          "H_cosine": 0.934628091133204,
+          "H_inner_product": 0.9616107476240311,
+          "naive_raw_norm": 0.018851482349298423,
+          "naive_raw_cosine": 0.8486184205153583,
+          "naive_raw_inner_product": 0.0631487315085696,
+          "naive_q_norm": 0.3460742608404415,
+          "naive_q_cosine": 0.8486184205153584,
+          "naive_q_inner_product": 1.1592802186536304
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24379874803135174,
+          "G_cosine": 0.9015277720921414,
+          "G_inner_product": 0.8675954222873049,
+          "H_norm": 0.24379874803135174,
+          "H_cosine": 0.9015277720921414,
+          "H_inner_product": 0.8675954222873049,
+          "naive_raw_norm": 0.01809242891749668,
+          "naive_raw_cosine": 0.8887579036932395,
+          "naive_raw_inner_product": 0.06347270717068644,
+          "naive_q_norm": 0.3321396083562583,
+          "naive_q_cosine": 0.8887579036932394,
+          "naive_q_inner_product": 1.1652277423400923
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2571955894238829,
+          "G_cosine": 0.9477059520640655,
+          "G_inner_product": 0.9621522410875631,
+          "H_norm": 0.2571955894238829,
+          "H_cosine": 0.9477059520640655,
+          "H_inner_product": 0.9621522410875631,
+          "naive_raw_norm": 0.007612500691509639,
+          "naive_raw_cosine": 0.7213725731038242,
+          "naive_raw_inner_product": 0.021676723710129235,
+          "naive_q_norm": 0.13974978206738173,
+          "naive_q_cosine": 0.7213725731038242,
+          "naive_q_inner_product": 0.3979398540881658
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23285637326414516,
+          "G_cosine": 0.9461327352389757,
+          "G_inner_product": 0.86965474075381,
+          "H_norm": 0.23285637326414516,
+          "H_cosine": 0.9461327352389757,
+          "H_inner_product": 0.86965474075381,
+          "naive_raw_norm": 0.013536962878928598,
+          "naive_raw_cosine": 0.8341385540153543,
+          "naive_raw_inner_product": 0.04457240865710174,
+          "naive_q_norm": 0.24851066539730549,
+          "naive_q_cosine": 0.8341385540153542,
+          "naive_q_inner_product": 0.8182573175980855
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25774118816541247,
+          "G_cosine": 0.9347722784154855,
+          "G_inner_product": 0.9510346089506128,
+          "H_norm": 0.25774118816541247,
+          "H_cosine": 0.9347722784154855,
+          "H_inner_product": 0.9510346089506128,
+          "naive_raw_norm": 0.005562100718919201,
+          "naive_raw_cosine": 0.5991028517077449,
+          "naive_raw_inner_product": 0.01315366892281928,
+          "naive_q_norm": 0.10210867555949456,
+          "naive_q_cosine": 0.5991028517077448,
+          "naive_q_inner_product": 0.2414741804096897
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2741815074720522,
+          "G_cosine": 0.9512353684840563,
+          "G_inner_product": 1.0295153360305727,
+          "H_norm": 0.2741815074720522,
+          "H_cosine": 0.9512353684840563,
+          "H_inner_product": 1.0295153360305727,
+          "naive_raw_norm": 0.010911838593414344,
+          "naive_raw_cosine": 0.8507244870778297,
+          "naive_raw_inner_product": 0.036643212217551416,
+          "naive_q_norm": 0.20031880812633343,
+          "naive_q_cosine": 0.8507244870778298,
+          "naive_q_inner_product": 0.6726936560233149
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24796190449242275,
+          "G_cosine": 0.9412488510768396,
+          "G_inner_product": 0.9212894400694281,
+          "H_norm": 0.24796190449242275,
+          "H_cosine": 0.9412488510768396,
+          "H_inner_product": 0.9212894400694281,
+          "naive_raw_norm": 0.010499065266804589,
+          "naive_raw_cosine": 0.8537958713559084,
+          "naive_raw_inner_product": 0.0353843609632871,
+          "naive_q_norm": 0.19274114281311008,
+          "naive_q_cosine": 0.8537958713559084,
+          "naive_q_inner_product": 0.6495837483112669
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26458311225823816,
+          "G_cosine": 0.9409477831122848,
+          "G_inner_product": 0.9827302282607693,
+          "H_norm": 0.26458311225823816,
+          "H_cosine": 0.9409477831122848,
+          "H_inner_product": 0.9827302282607693,
+          "naive_raw_norm": 0.026086513734408418,
+          "naive_raw_cosine": 0.9140567526640035,
+          "naive_raw_inner_product": 0.09412302469460315,
+          "naive_q_norm": 0.47889448645270066,
+          "naive_q_cosine": 0.9140567526640037,
+          "naive_q_inner_product": 1.7279042356297072
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2586406115114857,
+          "G_cosine": 0.9454774019922969,
+          "G_inner_product": 0.965282743729057,
+          "H_norm": 0.2586406115114857,
+          "H_cosine": 0.9454774019922969,
+          "H_inner_product": 0.965282743729057,
+          "naive_raw_norm": 0.01426784736852754,
+          "naive_raw_cosine": 0.8546093179136747,
+          "naive_raw_inner_product": 0.048131871580428635,
+          "naive_q_norm": 0.2619281943115295,
+          "naive_q_cosine": 0.8546093179136747,
+          "naive_q_inner_product": 0.883601701522629
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24875372001635063,
+          "G_cosine": 0.9361341271440432,
+          "G_inner_product": 0.9192091376364839,
+          "H_norm": 0.24875372001635063,
+          "H_cosine": 0.9361341271440432,
+          "H_inner_product": 0.9192091376364839,
+          "naive_raw_norm": 0.020204508111956454,
+          "naive_raw_cosine": 0.8831273033621164,
+          "naive_raw_inner_product": 0.07043333693793147,
+          "naive_q_norm": 0.37091301792244785,
+          "naive_q_cosine": 0.8831273033621165,
+          "naive_q_inner_product": 1.2930105212775245
+        },
+        {
+          "batch_size": 8,
+          "G_norm": 0.1838338993253961,
+          "G_cosine": 0.8830059401345706,
+          "G_inner_product": 0.6407607413308163,
+          "H_norm": 0.1838338993253961,
+          "H_cosine": 0.8830059401345706,
+          "H_inner_product": 0.6407607413308163,
+          "naive_raw_norm": 0.010355460341932018,
+          "naive_raw_cosine": 0.7926122235849938,
+          "naive_raw_inner_product": 0.03239939094967613,
+          "naive_q_norm": 0.19010485314063388,
+          "naive_q_cosine": 0.792612223584994,
+          "naive_q_inner_product": 0.5947858670650876
+        }
+      ]
+    },
+    {
+      "seed": 7923,
+      "q_epoch": 0.054472361809045224,
+      "full_gradient_norm": 3.877191635296205,
+      "full_output_gradient_norm": 0.07071067811865488,
+      "external_parameter_gradient_norm": 0.052893743472246006,
+      "expected_naive_q_bias_norm": 0.9181260859536723,
+      "epoch_gradient_diagnostics": {
+        "G": {
+          "absolute_error": 1.5286999033556167e-15,
+          "relative_error": 3.942802025669874e-16,
+          "cosine_with_full": 1.0000000000000002,
+          "gradient_norm": 3.8771916352962053
+        },
+        "H": {
+          "absolute_error": 1.5286999033556167e-15,
+          "relative_error": 3.942802025669874e-16,
+          "cosine_with_full": 1.0000000000000002,
+          "gradient_norm": 3.8771916352962053
+        },
+        "naive_raw": {
+          "absolute_error": 3.675120835290182,
+          "relative_error": 0.9478821737449186,
+          "cosine_with_full": 0.97166001981327,
+          "gradient_norm": 0.20830400272518249
+        },
+        "naive_q": {
+          "absolute_error": 0.9182546204166754,
+          "relative_error": 0.23683498438851958,
+          "cosine_with_full": 0.9716600198132697,
+          "gradient_norm": 3.8240310463386833
+        }
+      },
+      "batch_diagnostics": [
+        {
+          "batch_size": 12,
+          "G_norm": 0.2552861559140121,
+          "G_cosine": 0.9388490462426021,
+          "G_inner_product": 0.9292665410444341,
+          "H_norm": 0.2552861559140121,
+          "H_cosine": 0.9388490462426021,
+          "H_inner_product": 0.9292665410444341,
+          "naive_raw_norm": 0.008979807415210084,
+          "naive_raw_cosine": 0.8087441493404218,
+          "naive_raw_inner_product": 0.02815758745757669,
+          "naive_q_norm": 0.1648507080836538,
+          "naive_q_cosine": 0.8087441493404217,
+          "naive_q_inner_product": 0.5169151203005315
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25302476793830264,
+          "G_cosine": 0.926584554509413,
+          "G_inner_product": 0.9090030886418626,
+          "H_norm": 0.25302476793830264,
+          "H_cosine": 0.926584554509413,
+          "H_inner_product": 0.9090030886418626,
+          "naive_raw_norm": 0.014170496485109077,
+          "naive_raw_cosine": 0.8654727464091165,
+          "naive_raw_inner_product": 0.04755057033642738,
+          "naive_q_norm": 0.2601410332598438,
+          "naive_q_cosine": 0.8654727464091166,
+          "naive_q_inner_product": 0.8729302118956688
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23814689410517972,
+          "G_cosine": 0.9311973754150893,
+          "G_inner_product": 0.8598128515783448,
+          "H_norm": 0.23814689410517972,
+          "H_cosine": 0.9311973754150893,
+          "H_inner_product": 0.8598128515783448,
+          "naive_raw_norm": 0.01833046717081287,
+          "naive_raw_cosine": 0.8834589096349797,
+          "naive_raw_inner_product": 0.06278807315400606,
+          "naive_q_norm": 0.336509498799978,
+          "naive_q_cosine": 0.8834589096349801,
+          "naive_q_inner_product": 1.1526592765357204
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23587383236124784,
+          "G_cosine": 0.9063402865323303,
+          "G_inner_product": 0.828873614712349,
+          "H_norm": 0.23587383236124784,
+          "H_cosine": 0.9063402865323303,
+          "H_inner_product": 0.828873614712349,
+          "naive_raw_norm": 0.016121364005515962,
+          "naive_raw_cosine": 0.8436711738398451,
+          "naive_raw_inner_product": 0.052734187832711416,
+          "naive_q_norm": 0.29595492962155695,
+          "naive_q_cosine": 0.8436711738398449,
+          "naive_q_inner_product": 0.9680907175931339
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.26068655957623005,
+          "G_cosine": 0.9436851625859192,
+          "G_inner_product": 0.953812554152671,
+          "H_norm": 0.26068655957623005,
+          "H_cosine": 0.9436851625859192,
+          "H_inner_product": 0.953812554152671,
+          "naive_raw_norm": 0.012535204669935695,
+          "naive_raw_cosine": 0.836874608163148,
+          "naive_raw_inner_product": 0.040673269792388944,
+          "naive_q_norm": 0.23012045473405934,
+          "naive_q_cosine": 0.836874608163148,
+          "naive_q_inner_product": 0.7466771853030811
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23813026905900092,
+          "G_cosine": 0.954483079036735,
+          "G_inner_product": 0.8812519753030428,
+          "H_norm": 0.23813026905900092,
+          "H_cosine": 0.954483079036735,
+          "H_inner_product": 0.8812519753030428,
+          "naive_raw_norm": 0.01675412542661509,
+          "naive_raw_cosine": 0.8700859034029558,
+          "naive_raw_inner_product": 0.056519871011158254,
+          "naive_q_norm": 0.3075711217616608,
+          "naive_q_cosine": 0.8700859034029558,
+          "naive_q_inner_product": 1.0375880379354698
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2492366925505707,
+          "G_cosine": 0.917168504947372,
+          "G_inner_product": 0.8862951635465222,
+          "H_norm": 0.2492366925505707,
+          "H_cosine": 0.917168504947372,
+          "H_inner_product": 0.8862951635465222,
+          "naive_raw_norm": 0.019919262900602735,
+          "naive_raw_cosine": 0.8636437209105937,
+          "naive_raw_inner_product": 0.06669989504863347,
+          "naive_q_norm": 0.3656765052785926,
+          "naive_q_cosine": 0.8636437209105936,
+          "naive_q_inner_product": 1.2244722430514812
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24134473137634707,
+          "G_cosine": 0.9243517421480886,
+          "G_inner_product": 0.864952690030887,
+          "H_norm": 0.24134473137634707,
+          "H_cosine": 0.9243517421480886,
+          "H_inner_product": 0.864952690030887,
+          "naive_raw_norm": 0.013454608463799726,
+          "naive_raw_cosine": 0.8327652722477852,
+          "naive_raw_inner_product": 0.04344211263124764,
+          "naive_q_norm": 0.24699880851440453,
+          "naive_q_cosine": 0.8327652722477853,
+          "naive_q_inner_product": 0.7975074182304687
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.23773045722064934,
+          "G_cosine": 0.9252146529681585,
+          "G_inner_product": 0.852794901014398,
+          "H_norm": 0.23773045722064934,
+          "H_cosine": 0.9252146529681585,
+          "H_inner_product": 0.852794901014398,
+          "naive_raw_norm": 0.0039987039157432696,
+          "naive_raw_cosine": 0.5856987575713917,
+          "naive_raw_inner_product": 0.009080522060545484,
+          "naive_q_norm": 0.0734079408886449,
+          "naive_q_cosine": 0.5856987575713917,
+          "naive_q_inner_product": 0.1666996208531874
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25905343541282094,
+          "G_cosine": 0.925324668366758,
+          "G_inner_product": 0.9293959237583538,
+          "H_norm": 0.25905343541282094,
+          "H_cosine": 0.925324668366758,
+          "H_inner_product": 0.9293959237583538,
+          "naive_raw_norm": 0.020740408927838058,
+          "naive_raw_cosine": 0.8812154110406939,
+          "naive_raw_inner_product": 0.07086253192647768,
+          "naive_q_norm": 0.38075104950551414,
+          "naive_q_cosine": 0.881215411040694,
+          "naive_q_inner_product": 1.3008896543698394
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25689496404246037,
+          "G_cosine": 0.9536671934121528,
+          "G_inner_product": 0.9498820937909211,
+          "H_norm": 0.25689496404246037,
+          "H_cosine": 0.9536671934121528,
+          "H_inner_product": 0.9498820937909211,
+          "naive_raw_norm": 0.01820232390239957,
+          "naive_raw_cosine": 0.888988959985641,
+          "naive_raw_inner_product": 0.06273941616500447,
+          "naive_q_norm": 0.33415705318980765,
+          "naive_q_cosine": 0.8889889599856412,
+          "naive_q_inner_product": 1.1517660347634588
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.25862112549132227,
+          "G_cosine": 0.9246912263624723,
+          "G_inner_product": 0.9272097749975942,
+          "H_norm": 0.25862112549132227,
+          "H_cosine": 0.9246912263624723,
+          "H_inner_product": 0.9272097749975942,
+          "naive_raw_norm": 0.01500326205834131,
+          "naive_raw_cosine": 0.8571194741620853,
+          "naive_raw_inner_product": 0.04985908736101998,
+          "naive_q_norm": 0.27542888834039864,
+          "naive_q_cosine": 0.8571194741620853,
+          "naive_q_inner_product": 0.9153098140999056
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2608212997492122,
+          "G_cosine": 0.9093248047826651,
+          "G_inner_product": 0.9195584931687177,
+          "H_norm": 0.2608212997492122,
+          "H_cosine": 0.9093248047826651,
+          "H_inner_product": 0.9195584931687177,
+          "naive_raw_norm": 0.014781783327510237,
+          "naive_raw_cosine": 0.8580113511961892,
+          "naive_raw_inner_product": 0.04917418068229502,
+          "naive_q_norm": 0.2713629965105662,
+          "naive_q_cosine": 0.858011351196189,
+          "naive_q_inner_product": 0.9027363427838291
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2505420034825863,
+          "G_cosine": 0.9419305471826905,
+          "G_inner_product": 0.9149907308795422,
+          "H_norm": 0.2505420034825863,
+          "H_cosine": 0.9419305471826905,
+          "H_inner_product": 0.9149907308795422,
+          "naive_raw_norm": 0.009601694424619557,
+          "naive_raw_cosine": 0.7998946249382372,
+          "naive_raw_inner_product": 0.029778164584614027,
+          "naive_q_norm": 0.17626726849624466,
+          "naive_q_cosine": 0.799894624938237,
+          "naive_q_inner_product": 0.5466655675588737
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.24498703287695597,
+          "G_cosine": 0.9517146791585369,
+          "G_inner_product": 0.9039972989122167,
+          "H_norm": 0.24498703287695597,
+          "H_cosine": 0.9517146791585369,
+          "H_inner_product": 0.9039972989122167,
+          "naive_raw_norm": 0.012567101403889135,
+          "naive_raw_cosine": 0.8355580541013115,
+          "naive_raw_inner_product": 0.04071261668978716,
+          "naive_q_norm": 0.2307060128573743,
+          "naive_q_cosine": 0.8355580541013116,
+          "naive_q_inner_product": 0.7473995130320705
+        },
+        {
+          "batch_size": 12,
+          "G_norm": 0.2509762057759028,
+          "G_cosine": 0.9417303854562723,
+          "G_inner_product": 0.9163816833550815,
+          "H_norm": 0.2509762057759028,
+          "H_cosine": 0.9417303854562723,
+          "H_inner_product": 0.9163816833550815,
+          "naive_raw_norm": 0.013735058881811868,
+          "naive_raw_cosine": 0.8620209439658028,
+          "naive_raw_inner_product": 0.04590559389926381,
+          "naive_q_norm": 0.2521472986605684,
+          "naive_q_cosine": 0.862020943965803,
+          "naive_q_inner_product": 0.8427318437226475
+        },
+        {
+          "batch_size": 8,
+          "G_norm": 0.17051580570470784,
+          "G_cosine": 0.915315450006317,
+          "G_inner_product": 0.6051355979239228,
+          "H_norm": 0.17051580570470784,
+          "H_cosine": 0.915315450006317,
+          "H_inner_product": 0.6051355979239228,
+          "naive_raw_norm": 0.009258364446311697,
+          "naive_raw_cosine": 0.7819298861956849,
+          "naive_raw_inner_product": 0.02806850955593664,
+          "naive_q_norm": 0.16996443955867416,
+          "naive_q_cosine": 0.7819298861956849,
+          "naive_q_inner_product": 0.5152798340988368
+        }
+      ]
+    }
+  ],
+  "rate_fits": {
+    "G": [
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -2.7988084635105097,
+          "intercept": 14.078772338648651,
+          "r_squared": 0.9984931602252676,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -2.6524826184397607,
+          "intercept": 12.826174168354518,
+          "r_squared": 0.9971168043637137,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.2717702630169954,
+          "intercept": 9.600000411290244,
+          "r_squared": 0.9904297782070085,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.2717702630169954,
+          "intercept": 9.600000411290244,
+          "r_squared": 0.9904297782070085,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -3.2474906861236486,
+          "intercept": 17.200284846750076,
+          "r_squared": 0.9988989057125564,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -3.097756842874722,
+          "intercept": 15.918528367431415,
+          "r_squared": 0.9978070137804018,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.6934162225504314,
+          "intercept": 12.492297726109985,
+          "r_squared": 0.9922658800418438,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.6934162225504314,
+          "intercept": 12.492297726109985,
+          "r_squared": 0.9922658800418438,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -2.7641268676425974,
+          "intercept": 13.519411360001508,
+          "r_squared": 0.9990664650230958,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -2.6498814126713506,
+          "intercept": 12.5414357975963,
+          "r_squared": 0.9982384918489898,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.3445465975516147,
+          "intercept": 9.95417973058681,
+          "r_squared": 0.9941336407863975,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.3445465975516147,
+          "intercept": 9.95417973058681,
+          "r_squared": 0.9941336407863975,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -2.980701773900562,
+          "intercept": 15.087466000117688,
+          "r_squared": 0.9988495846056242,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -2.8421493110366614,
+          "intercept": 13.901417182466574,
+          "r_squared": 0.9977607569839303,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.477150350299541,
+          "intercept": 10.808428726947676,
+          "r_squared": 0.9925875228557325,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.477150350299541,
+          "intercept": 10.808428726947676,
+          "r_squared": 0.9925875228557325,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -3.306959094172982,
+          "intercept": 17.757113837526802,
+          "r_squared": 0.9986576442301033,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -3.14021560632456,
+          "intercept": 16.32974481337158,
+          "r_squared": 0.9973472836919253,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.6977745370433084,
+          "intercept": 12.580555228543538,
+          "r_squared": 0.9908209877433498,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.6977745370433084,
+          "intercept": 12.580555228543538,
+          "r_squared": 0.9908209877433498,
+          "valid_points": 40
+        }
+      }
+    ],
+    "H": [
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -2.786229754617585,
+          "intercept": 13.988070844605797,
+          "r_squared": 0.9984711281238292,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -2.6401986673637974,
+          "intercept": 12.737995550478797,
+          "r_squared": 0.9970955243311017,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.2607876708863652,
+          "intercept": 9.522835477084426,
+          "r_squared": 0.9904083973922366,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.2607876708863652,
+          "intercept": 9.522835477084426,
+          "r_squared": 0.9904083973922366,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -3.238395556818388,
+          "intercept": 17.138852142506085,
+          "r_squared": 0.9988726836696378,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -3.0881227842406322,
+          "intercept": 15.852477497799459,
+          "r_squared": 0.9977751024119411,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.6838773816123296,
+          "intercept": 12.427036832267564,
+          "r_squared": 0.9922195332757184,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.6838773816123296,
+          "intercept": 12.427036832267564,
+          "r_squared": 0.9922195332757184,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -2.7571262512381214,
+          "intercept": 13.473213910628816,
+          "r_squared": 0.9990567706079786,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -2.642728664343107,
+          "intercept": 12.493933469445395,
+          "r_squared": 0.9982248329127513,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.3380540263953793,
+          "intercept": 9.912282917216725,
+          "r_squared": 0.9941175491556841,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.3380540263953793,
+          "intercept": 9.912282917216725,
+          "r_squared": 0.9941175491556841,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -2.9720659219312893,
+          "intercept": 15.027387612365326,
+          "r_squared": 0.9988518688393502,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -2.8339203322716613,
+          "intercept": 13.844825523088804,
+          "r_squared": 0.9977595066923828,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.4693699571383516,
+          "intercept": 10.755642022856694,
+          "r_squared": 0.9925591254185169,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.4693699571383516,
+          "intercept": 10.755642022856694,
+          "r_squared": 0.9925591254185169,
+          "valid_points": 40
+        }
+      },
+      {
+        "fractions": [
+          0.3,
+          0.4,
+          0.6
+        ],
+        "floor": 1e-14,
+        "0.3": {
+          "fraction": 0.3,
+          "fit_start_index": 47,
+          "status": "ok",
+          "slope": -3.2986189700743864,
+          "intercept": 17.70157282208566,
+          "r_squared": 0.9986512522829645,
+          "valid_points": 20
+        },
+        "0.4": {
+          "fraction": 0.4,
+          "fit_start_index": 41,
+          "status": "ok",
+          "slope": -3.1314634559454704,
+          "intercept": 16.270674560159485,
+          "r_squared": 0.9973238706467816,
+          "valid_points": 26
+        },
+        "0.6": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.689196472600602,
+          "intercept": 12.522954668166129,
+          "r_squared": 0.9907711503974018,
+          "valid_points": 40
+        },
+        "selected_fraction": 0.6,
+        "selected": {
+          "fraction": 0.6,
+          "fit_start_index": 27,
+          "status": "ok",
+          "slope": -2.689196472600602,
+          "intercept": 12.522954668166129,
+          "r_squared": 0.9907711503974018,
+          "valid_points": 40
+        }
+      }
+    ],
+    "naive_raw": [
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      }
+    ],
+    "naive_q": [
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      },
+      {
+        "status": "not_applicable",
+        "reason": "bias-related platform; no theoretical rate assigned"
+      }
+    ]
+  },
+  "rate_fit_interpretation": "Only G and H are primary rate references; naive methods reach a bias-related platform and are not assigned a theoretical rate.",
+  "threshold_epochs": {
+    "G": [
+      4100,
+      3300,
+      3700,
+      3400,
+      3400
+    ],
+    "H": [
+      4100,
+      3300,
+      3700,
+      3400,
+      3400
+    ],
+    "naive_raw": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "naive_q": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "theoretical_memory_bytes": 56000,
+  "memory_breakdown_bytes": {
+    "X": 51200,
+    "xi": 1600,
+    "full_output": 1600,
+    "H_cache": 1600
+  },
+  "per_method_efficiency": {
+    "G": [
+      {
+        "wall_time_seconds": 190.48970853970968,
+        "rss_before": 654778368,
+        "rss_after": 659050496,
+        "counters": {
+          "forward_full": 102067,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 180.79774840682512,
+        "rss_before": 660635648,
+        "rss_after": 660840448,
+        "counters": {
+          "forward_full": 102067,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 174.4006704824278,
+        "rss_before": 661245952,
+        "rss_after": 661315584,
+        "counters": {
+          "forward_full": 102067,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 160.9181846829597,
+        "rss_before": 661835776,
+        "rss_after": 661979136,
+        "counters": {
+          "forward_full": 102067,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 187.85782575953635,
+        "rss_before": 663855104,
+        "rss_after": 663937024,
+        "counters": {
+          "forward_full": 102067,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      }
+    ],
+    "H": [
+      {
+        "wall_time_seconds": 82.94337618220015,
+        "rss_before": 659050496,
+        "rss_after": 659275776,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 204000,
+          "cache_refresh": 1200000
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 104.59004514513072,
+        "rss_before": 660840448,
+        "rss_after": 660869120,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 204000,
+          "cache_refresh": 1200000
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 103.89980316953734,
+        "rss_before": 661315584,
+        "rss_after": 661344256,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 204000,
+          "cache_refresh": 1200000
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 104.01230990322074,
+        "rss_before": 661979136,
+        "rss_after": 662007808,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 204000,
+          "cache_refresh": 1200000
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 98.34994967636885,
+        "rss_before": 663937024,
+        "rss_after": 663965696,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 204000,
+          "cache_refresh": 1200000
+        },
+        "learning_rate": 0.025
+      }
+    ],
+    "naive_raw": [
+      {
+        "wall_time_seconds": 69.26937509860727,
+        "rss_before": 659275776,
+        "rss_after": 659304448,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 85.42769925139146,
+        "rss_before": 660869120,
+        "rss_after": 660893696,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 86.65516368515091,
+        "rss_before": 661344256,
+        "rss_after": 661368832,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 87.67686852064799,
+        "rss_before": 662007808,
+        "rss_after": 662032384,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      },
+      {
+        "wall_time_seconds": 73.66745193884708,
+        "rss_before": 663965696,
+        "rss_after": 663990272,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.025
+      }
+    ],
+    "naive_q": [
+      {
+        "wall_time_seconds": 69.55579430237412,
+        "rss_before": 659304448,
+        "rss_after": 659324928,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.45894833948339486
+      },
+      {
+        "wall_time_seconds": 85.38370896255947,
+        "rss_before": 660893696,
+        "rss_after": 660914176,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.45894833948339486
+      },
+      {
+        "wall_time_seconds": 84.46756386500783,
+        "rss_before": 661368832,
+        "rss_after": 661389312,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.45894833948339486
+      },
+      {
+        "wall_time_seconds": 87.52585624167114,
+        "rss_before": 662032384,
+        "rss_after": 662052864,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.45894833948339486
+      },
+      {
+        "wall_time_seconds": 74.11160468237358,
+        "rss_before": 663990272,
+        "rss_after": 664010752,
+        "counters": {
+          "forward_full": 67,
+          "forward_batch": 102000,
+          "cache_refresh": 0
+        },
+        "learning_rate": 0.45894833948339486
+      }
+    ]
+  },
+  "interpretation": "Pairwise non-Gram KL-3/4 benchmark; naive-q bias is a frozen-state epoch diagnostic, not an exact online-training recursion."
+}

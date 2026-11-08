@@ -1,0 +1,340 @@
+{
+  "experiment": "exp1_kl_rate_calibration",
+  "kind": "fourth_power",
+  "kl_exponent": 0.75,
+  "expected_output_space_rate": "polynomial k^-2 upper-bound regime",
+  "N": 10,
+  "input_dim": 4,
+  "hidden": [
+    64,
+    64
+  ],
+  "output_dim": 2,
+  "epochs": 500000,
+  "eta": 0.001,
+  "record_every": 1000,
+  "sample_order": "independent random permutation per data epoch",
+  "repeats": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "f_star": 0.0,
+  "activation": "SmoothLeakyReLU",
+  "analytic_check": {
+    "status": "passed",
+    "mse_gradient": [
+      [
+        -0.3,
+        0.2
+      ]
+    ],
+    "fourth_gradient": [
+      [
+        -0.026999999999999996,
+        0.008000000000000002
+      ]
+    ]
+  },
+  "fit_results_per_seed": {
+    "0": {
+      "fractions": [
+        0.2,
+        0.3,
+        0.4,
+        0.6
+      ],
+      "floor": 1e-14,
+      "0.2": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -2.706477517610319,
+        "intercept": 30.36380906266914,
+        "r_squared": 0.9978225094498595,
+        "valid_points": 100
+      },
+      "0.3": {
+        "fraction": 0.3,
+        "fit_start_index": 351,
+        "status": "ok",
+        "slope": -2.39839930894672,
+        "intercept": 26.348827918973292,
+        "r_squared": 0.9921893275240582,
+        "valid_points": 150
+      },
+      "0.4": {
+        "fraction": 0.4,
+        "fit_start_index": 301,
+        "status": "ok",
+        "slope": -2.502162133811318,
+        "intercept": 27.693071326847644,
+        "r_squared": 0.9832186468975482,
+        "valid_points": 200
+      },
+      "0.6": {
+        "fraction": 0.6,
+        "fit_start_index": 201,
+        "status": "ok",
+        "slope": -2.8919505770920333,
+        "intercept": 32.76671070732505,
+        "r_squared": 0.9451299560420007,
+        "valid_points": 300
+      },
+      "selected_fraction": 0.2,
+      "selected": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -2.706477517610319,
+        "intercept": 30.36380906266914,
+        "r_squared": 0.9978225094498595,
+        "valid_points": 100
+      }
+    },
+    "1": {
+      "fractions": [
+        0.2,
+        0.3,
+        0.4,
+        0.6
+      ],
+      "floor": 1e-14,
+      "0.2": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -0.15472998808444838,
+        "intercept": -1.785174692361616,
+        "r_squared": 0.9992579316984339,
+        "valid_points": 100
+      },
+      "0.3": {
+        "fraction": 0.3,
+        "fit_start_index": 351,
+        "status": "ok",
+        "slope": -0.185147435673517,
+        "intercept": -1.3889241399540353,
+        "r_squared": 0.9808371210799506,
+        "valid_points": 150
+      },
+      "0.4": {
+        "fraction": 0.4,
+        "fit_start_index": 301,
+        "status": "ok",
+        "slope": -0.3118980555409941,
+        "intercept": 0.25689302791487484,
+        "r_squared": 0.8603342224828928,
+        "valid_points": 200
+      },
+      "0.6": {
+        "fraction": 0.6,
+        "fit_start_index": 201,
+        "status": "ok",
+        "slope": -0.9000103817394653,
+        "intercept": 7.863503805134878,
+        "r_squared": 0.8674667997735548,
+        "valid_points": 300
+      },
+      "selected_fraction": 0.2,
+      "selected": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -0.15472998808444838,
+        "intercept": -1.785174692361616,
+        "r_squared": 0.9992579316984339,
+        "valid_points": 100
+      }
+    },
+    "2": {
+      "fractions": [
+        0.2,
+        0.3,
+        0.4,
+        0.6
+      ],
+      "floor": 1e-14,
+      "0.2": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -0.4293653073882554,
+        "intercept": 1.606922190514919,
+        "r_squared": 0.8629035592430395,
+        "valid_points": 100
+      },
+      "0.3": {
+        "fraction": 0.3,
+        "fit_start_index": 351,
+        "status": "ok",
+        "slope": -0.27081234960725437,
+        "intercept": -0.459799175012982,
+        "r_squared": 0.8110594508072998,
+        "valid_points": 150
+      },
+      "0.4": {
+        "fraction": 0.4,
+        "fit_start_index": 301,
+        "status": "ok",
+        "slope": -0.22551902751334302,
+        "intercept": -1.0485356757074473,
+        "r_squared": 0.8689294631361829,
+        "valid_points": 200
+      },
+      "0.6": {
+        "fraction": 0.6,
+        "fit_start_index": 201,
+        "status": "ok",
+        "slope": -0.7040401948995375,
+        "intercept": 5.121175084794991,
+        "r_squared": 0.6871205466854968,
+        "valid_points": 300
+      },
+      "selected_fraction": 0.2,
+      "selected": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -0.4293653073882554,
+        "intercept": 1.606922190514919,
+        "r_squared": 0.8629035592430395,
+        "valid_points": 100
+      }
+    },
+    "3": {
+      "fractions": [
+        0.2,
+        0.3,
+        0.4,
+        0.6
+      ],
+      "floor": 1e-14,
+      "0.2": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -0.05352527993842238,
+        "intercept": -3.378594686781489,
+        "r_squared": 0.9107213202412489,
+        "valid_points": 100
+      },
+      "0.3": {
+        "fraction": 0.3,
+        "fit_start_index": 351,
+        "status": "ok",
+        "slope": -0.034178442848399646,
+        "intercept": -3.630759612519763,
+        "r_squared": 0.8412260516259962,
+        "valid_points": 150
+      },
+      "0.4": {
+        "fraction": 0.4,
+        "fit_start_index": 301,
+        "status": "ok",
+        "slope": -0.022989522751819105,
+        "intercept": -3.7761213538391223,
+        "r_squared": 0.7705021629430715,
+        "valid_points": 200
+      },
+      "0.6": {
+        "fraction": 0.6,
+        "fit_start_index": 201,
+        "status": "ok",
+        "slope": -0.011305311231310565,
+        "intercept": -3.9271267040667044,
+        "r_squared": 0.6342889226897719,
+        "valid_points": 300
+      },
+      "selected_fraction": 0.2,
+      "selected": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -0.05352527993842238,
+        "intercept": -3.378594686781489,
+        "r_squared": 0.9107213202412489,
+        "valid_points": 100
+      }
+    },
+    "4": {
+      "fractions": [
+        0.2,
+        0.3,
+        0.4,
+        0.6
+      ],
+      "floor": 1e-14,
+      "0.2": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -5.759133038288008,
+        "intercept": 71.51961275514485,
+        "r_squared": 0.9351101638687159,
+        "valid_points": 100
+      },
+      "0.3": {
+        "fraction": 0.3,
+        "fit_start_index": 351,
+        "status": "ok",
+        "slope": -3.2060461928050006,
+        "intercept": 38.242791562328556,
+        "r_squared": 0.7652109166299836,
+        "valid_points": 150
+      },
+      "0.4": {
+        "fraction": 0.4,
+        "fit_start_index": 301,
+        "status": "ok",
+        "slope": -1.879690467544083,
+        "intercept": 21.01057587786288,
+        "r_squared": 0.6147273189915663,
+        "valid_points": 200
+      },
+      "0.6": {
+        "fraction": 0.6,
+        "fit_start_index": 201,
+        "status": "ok",
+        "slope": -0.7549672314870035,
+        "intercept": 6.472223967290039,
+        "r_squared": 0.4071161533993334,
+        "valid_points": 300
+      },
+      "selected_fraction": 0.2,
+      "selected": {
+        "fraction": 0.2,
+        "fit_start_index": 401,
+        "status": "ok",
+        "slope": -5.759133038288008,
+        "intercept": 71.51961275514485,
+        "r_squared": 0.9351101638687159,
+        "valid_points": 100
+      }
+    }
+  },
+  "wall_time_seconds_per_seed": {
+    "0": 883.187472420017,
+    "1": 901.5236448200012,
+    "2": 874.4573712759884,
+    "3": 788.794044639013,
+    "4": 787.8361154750164
+  },
+  "rss_before_per_seed": {
+    "0": 83079168,
+    "1": 83329024,
+    "2": 83595264,
+    "3": 83881984,
+    "4": 84176896
+  },
+  "rss_after_per_seed": {
+    "0": 83329024,
+    "1": 83595264,
+    "2": 83877888,
+    "3": 84176896,
+    "4": 84480000
+  },
+  "interpretation": "Output-space KL calibration; not a proof of the full parameterized stochastic rate."
+}
